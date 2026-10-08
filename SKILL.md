@@ -1,1 +1,1 @@
-PLACEHOLDER_LOAD_FROM_FILE
+LOAD_FROM_/workspace/openai-math-skill/SKILL.md
