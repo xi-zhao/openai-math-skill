@@ -27,7 +27,7 @@
 5. **隔离审稿**：审稿者只看题面和成稿；有分歧时辩论；涉及计算时做 clean-room 复核。
 6. **链式推进**：已审或已验证的结果作为前提，推向更强的目标。
 7. **验证**：能形式化的走 Lean 4 + Mathlib（配合 comparator）；否则做计算或符号检查，并写明验证了什么、没验证什么。
-8. **诚实的状态标签**：`PROPOSED` / `DISPUTED` / `REVIEWED`，以及附加的 `VERIFIED(Lean | computation; scope=…)`。
+8. **诚实的状态标签**：`PROPOSED` / `DISPUTED` / `REVIEWED(partial)` / `REVIEWED`，以及附加的 `VERIFIED(Lean | computation; scope=…)`。`REVIEWED(partial)` 只担保部分结果在其声称范围内经过审稿，不代表原题已解决。
 
 工作流还会根据环境能力（能否开隔离会话、模型族数量、代码执行、Lean）选择 FULL / STANDARD / SOLO 模式，并设有预算与停止规则。
 
@@ -42,9 +42,9 @@
 
 ### 状态
 
-- 当前版本：**v2**。
-- 已经过我们自己的审查，以及一次独立的 Codex 审查。
-- **Lean / comparator 部分尚未端到端实际跑通**；端到端案例研究正在进行中。
+- 当前版本：**v3**（改动见 [CHANGELOG.md](CHANGELOG.md)）。
+- v2 经过了我们自己的审查和一次独立的 Codex 审查；v3 根据一次**真实的端到端试跑**修订（2026-10-08，单模型族档位：Codex；结果为 NO_RESULT/PARTIAL：4 次求解都是 PARTIAL，原命题未解决；Lean 与 comparator 只在一个子引理上跑通）。
+- `SKILL.md` 的 Lean 一节写明了哪些命令在那次试跑中实际验证过、哪些没有实测。这只是一个数据点，不代表成功率。
 
 ### 参考
 
@@ -76,7 +76,7 @@ It reconstructs the prompt-engineering pattern behind OpenAI's [openai/math](htt
 5. **Isolated review**: referees see only the statement and the writeup; disagreements go to debate; computational claims get a clean-room re-check.
 6. **Chaining**: reviewed or verified results become premises for the next, stronger target.
 7. **Verification**: Lean 4 + Mathlib (with comparator) when formalizable; otherwise computational or symbolic checks, each stating what it verifies and what it does not.
-8. **Honest status labels**: `PROPOSED` / `DISPUTED` / `REVIEWED`, plus an optional `VERIFIED(Lean | computation; scope=…)`.
+8. **Honest status labels**: `PROPOSED` / `DISPUTED` / `REVIEWED(partial)` / `REVIEWED`, plus an optional `VERIFIED(Lean | computation; scope=…)`. `REVIEWED(partial)` means a partial result passed review within its claimed scope; it says nothing about the original problem.
 
 The workflow also picks a FULL / STANDARD / SOLO mode from the environment's capabilities (isolated sessions, number of model families, code execution, Lean), and has budget and stopping rules.
 
@@ -91,9 +91,9 @@ For other agents, follow their own convention for skill or rule files.
 
 ### Status
 
-- Current version: **v2**.
-- Reviewed by our own audit plus an independent Codex review.
-- **The Lean / comparator part has not yet been run end to end**; an end-to-end case study is in progress.
+- Current version: **v3** (see [CHANGELOG.md](CHANGELOG.md)).
+- v2 went through our own audit plus an independent Codex review; v3 was revised after a **real end-to-end trial run** (2026-10-08, single-model tier: Codex; result NO_RESULT/PARTIAL: all 4 solver runs returned PARTIAL and the original problem stayed unresolved; Lean and comparator ran on one sub-lemma).
+- The Lean section of `SKILL.md` says which commands were actually exercised in that trial and which are untested. It is one data point, not a success rate.
 
 ### References
 
