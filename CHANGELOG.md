@@ -8,6 +8,7 @@ Snapshot while end-to-end polishing continues (not the final mature version). / 
 - **429 retries**: explicit retry limit for rate-limit errors. / 为 429 限流错误规定重试上限。
 - **Ambiguity attack**: web flag for the (i) ambiguity-attack step. / 歧义攻击步骤的联网标志。
 - **H2 stop**: deliverables required when stopping at H2. / 停在 H2 时的交付物要求。
+- **Docs**: README rewritten; multi-agent install guide. / README 重写，新增多 agent 安装指南。
 
 ## v5 (2026-10-08)
 
