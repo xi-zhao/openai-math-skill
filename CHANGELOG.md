@@ -1,5 +1,12 @@
 # Changelog
 
+## v8 (2026-10-08)
+
+Maturity-tested release (5 criteria passed). Includes the unreleased v7 changes. / 成熟度测试通过（5 项标准）的发布版，含未单独发布的 v7 改动。
+
+- **v8**: Step 1 allows tool self-checks unrelated to the problem (e.g. comparator smoke test) before H2; template (a) requires computational certificates to include the log of an actual run; defines what counts as an "opened source" under SEARCH POLICY. / 步骤 1 允许 H2 前做与本题无关的工具自检；模板 (a) 的计算证书须附实际运行日志；定义"打开过的来源"。
+- **v7**: S4 counting (denominator); candidate list format; Lean keeps the problem's original domain. / S4 计数口径；候选清单格式；Lean 保留原题取值范围。
+
 ## v6 snapshot (2026-10-08)
 
 Snapshot while end-to-end polishing continues (not the final mature version). / 打磨进行中的快照，不是最终成熟版。
