@@ -1,6 +1,11 @@
 # Changelog
 
 ## v8 (2026-10-08)
+- Maturity rounds complete: all 5 acceptance criteria passed in real runs on the fixed (isolation-leak-free) harness: calibration problem to Lean VERIFIED(strict; H3 pending) on the main theorem; refutation problem to REFUTED (e.g. F5 = 641 x 6700417) with comparator; multi-theorem clean acceptance rejecting sorry / private axiom / native_decide / statement drift / forged Challenge; vague-topic entry with real citations and claimed-resolved check; zero "doesn't run as written" gaps in the last three rounds.
+- Frontmatter `name` changed to `openai-math-skill` (Agent Skills naming rule: lowercase + hyphens, matches folder).
+- Fixes the truncated SKILL.md pushed in the v6 snapshot commits.
+
+## v8 (2026-10-08)
 
 Maturity-tested release (5 criteria passed). Includes the unreleased v7 changes. / 成熟度测试通过（5 项标准）的发布版，含未单独发布的 v7 改动。
 

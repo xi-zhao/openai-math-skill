@@ -1,5 +1,5 @@
 ---
-name: "OpenAI Math Skill"
+name: openai-math-skill
 description: "Use when a researcher gives a research topic, a rough question, or a precise open problem in mathematics, theoretical physics, CS theory, or another proof/derivation-heavy field and wants reasoning models to attack it the openai/math way: verified candidate problems from a vague topic, self-contained prove-or-refute statements, best-of-N solving, isolated review and debate, chaining, Lean or computational verification, and honest status labels. 中文触发：用 AI 做数学/理论物理/理论计算机研究、开放问题、猜想、证明或否证、写题面、best-of-N、AI 审稿、Lean 形式化、只有一个研究方向想找题。"
 ---
 
